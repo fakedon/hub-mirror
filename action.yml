@@ -69,6 +69,6 @@ runs:
     - ${{ inputs.static_list }}
     - ${{ inputs.force_update}}
     - ${{ inputs.debug}}
-    - ${{ inputs.prefix_dst}}
+    - ${{ inputs.rename_dst}}
     - ${{ inputs.prefix_dst}}
     - ${{ inputs.suffix_dst}}
