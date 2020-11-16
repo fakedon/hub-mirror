@@ -1,6 +1,6 @@
 # hub-mirror
 
-Action for mirroring repos between Hubs (like Github and Gitee)  
+Github Actions for mirroring repos between Hubs (like Github and Gitee)  
 Based on [this action](https://github.com/Yikun/hub-mirror-action)
 
 ### Feature
