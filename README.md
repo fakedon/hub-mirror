@@ -1,14 +1,15 @@
 # hub-mirror
 
+Action for mirroring repos between Hubs (like Github and Gitee)  
 Based on [this action](https://github.com/Yikun/hub-mirror-action)
 
 ### Feature
 * add dst repo prefix and suffix.
 
-### Description
-rename_dst  Rename the destination repo's name, default false  
-prefix_dst  Prefix_ added to the beggining of the destination repo's name, prefix will be the source repo's account if not set  
-suffix_dst  _Suffix added to the end of the destination repo's name  
+### New added settings
+- `rename_dst`   Rename the destination repo's name, default false  
+- `prefix_dst`  Prefix_ added to the beggining of the destination repo's name, prefix will be the source repo's account if not set  
+- `suffix_dst`  _Suffix added to the end of the destination repo's name  
 
 ### Sample
 
