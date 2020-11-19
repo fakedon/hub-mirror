@@ -17,11 +17,11 @@ mirror https://github.com/baidu/amis to https://github.com/fakedon/baidu_amis
 ```
 - name: sync github/baidu
   uses: fakedon/hub-mirror@main
-    with:
-      src: github/baidu
-      dst: github/fakedon
-      dst_key: ${{ secrets.GITHUB_SSH_KEY }}
-      dst_token: ${{ secrets.GITHUB_TOKEN }}
-      static_list: "amis"
-      rename_dst: true
+  with:
+    src: github/baidu
+    dst: github/fakedon
+    dst_key: ${{ secrets.GITHUB_SSH_KEY }}
+    dst_token: ${{ secrets.GITHUB_TOKEN }}
+    static_list: "amis"
+    rename_dst: true
 ```
