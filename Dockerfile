@@ -5,6 +5,4 @@ RUN apk add --no-cache git openssh-client bash jq curl&& \
 
 ADD *.sh /
 
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["bash", "/entrypoint.sh"]
