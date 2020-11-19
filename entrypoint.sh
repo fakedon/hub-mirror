@@ -32,6 +32,7 @@ BLACK_LIST="${INPUT_BLACK_LIST}"
 STATIC_LIST="${INPUT_STATIC_LIST}"
 
 RENAME_DST="${INPUT_RENAME_DST}"
+RENAME_FMT="${INPUT_RENAME_FMT}"
 PREFIX_DST="${INPUT_PREFIX_DST}"
 SUFFIX_DST="${INPUT_SUFFIX_DST}"
 
@@ -235,13 +236,17 @@ for repo in $SRC_REPOS
 
     dst_repo=$repo
     if [[ "$RENAME_DST" == "true" ]]; then
-      if [[ "$PREFIX_DST" ]]; then
-        dst_repo=${PREFIX_DST}_${dst_repo}
+      if [[ "$RENAME_FMT" ]]; then
+        dst_repo=$(echo "$dst_repo" | sed -r "$RENAME_FMT") && eval dst_repo="$dst_repo"
       else
-        dst_repo=${SRC_ACCOUNT}_${dst_repo}
-      fi
-      if [[ "$SUFFIX_DST" ]]; then
-        dst_repo=${dst_repo}_${SUFFIX_DST}
+        if [[ "$PREFIX_DST" ]]; then
+          dst_repo=${PREFIX_DST}_${dst_repo}
+        else
+          dst_repo=${SRC_ACCOUNT}_${dst_repo}
+        fi
+        if [[ "$SUFFIX_DST" ]]; then
+          dst_repo=${dst_repo}_${SUFFIX_DST}
+        fi
       fi
     fi
 
