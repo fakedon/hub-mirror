@@ -48,7 +48,7 @@ inputs:
     description: "Rename the destination repo's name, default false"
     default: false
   rename_fmt:
-    description: "Hight priority, the format of renaming the destination repo's name, same as sed regex rules,like `s/(.*)/${SRC_TYPE}_${SRC_ACCOUNT}_\1/g`"
+    description: "Hight priority, the format of renaming the destination repo's name, same as sed regex rules,like 's/(.*)/${SRC_TYPE}_${SRC_ACCOUNT}_\\1/g'"
     default: ''
   prefix_dst:
     description: "Prefix_ added to the beggining of the destination repo's name, prefix will be the source repo's account if not set"
