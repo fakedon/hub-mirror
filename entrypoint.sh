@@ -99,7 +99,9 @@ function retry {
       sleep $wait
     else
       echo "Retry $count/$retries exited $exit, no more retries left."
-      return $exit
+      echo -e "\n\033[31m${exit} ...\033[0m"
+      # tg notify
+      # return $exit
     fi
   done
   return 0
