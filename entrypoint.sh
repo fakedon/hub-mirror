@@ -99,9 +99,7 @@ function retry {
       sleep $wait
     else
       echo "Retry $count/$retries exited $exit, no more retries left."
-      echo -e "\n\033[31m${exit} ...\033[0m"
-      # tg notify
-      # return $exit
+      return $exit
     fi
   done
   return 0
@@ -273,5 +271,7 @@ echo "Total: $all, skip: $skip, successed: $success, failed: $failed."
 echo "Failed: "$FAILED_LIST
 
 if [[ "$DELAY_EXIT" == "true" ]]; then
-  exit 1
+  # notify "${SRC_HUB}: Failed"
+  exit 0
+  # exit 1
 fi
